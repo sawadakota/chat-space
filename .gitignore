@@ -12,6 +12,8 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/secrets.yml
 
+>>>>>>> d704a0df60ec850811a2563ef9bc5d1da594d756
 # Ignore Byebug command history file.
 .byebug_history
