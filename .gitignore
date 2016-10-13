@@ -12,11 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-<<<<<<< HEAD
-=======
 
-config/secrets.yml
->>>>>>> a09053d8826a56a5e800609cfc8668f5364d5092
 
 # Ignore Byebug command history file.
 .byebug_history
