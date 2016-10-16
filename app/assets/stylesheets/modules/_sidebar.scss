@@ -1,0 +1,43 @@
+.sidebar {
+  background-color: $sidebarMainColor;
+  width: 300px;
+  height: 100%;
+
+  .sidebar__top {
+    background-color: $sidebarTopColor;
+    height: 50px;
+    padding: 20px 20px;
+    .sidebar__username {
+      line-height: 60px;
+      font-size: 16px;
+      color: #FFFFFF;
+      font-weight: bold;
+      float: left;
+    }
+    .sidebar__icon {
+      line-height: 60px;
+      float: right;
+      font-size: 20px;
+      a {
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  .sidebar__group {
+    height: 30px;
+    padding: 20px 20px;
+    &:hover {
+      background-color: $sidebarHoverColor;
+    }
+    .sidebar__groupname {
+      font-size: 15px;
+      color: #FFFFFF;
+    }
+    .sidebar__latest-massage {
+      padding-top: 5px;
+      font-size: 11px;
+      color: #FFFFFF;
+    }
+  }
+}
