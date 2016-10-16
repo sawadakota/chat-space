@@ -1,0 +1,43 @@
+.sidebar {
+  background-color: #2f3e51;
+  width: 300px;
+  height: 110000px;
+
+  .sidebar__top {
+    background-color: #253141;
+    height: 50px;
+    padding: 20px 20px;
+    .sidebar__username {
+      line-height: 60px;
+      font-size: 16px;
+      color: #FFFFFF;
+      font-weight: bold;
+      float: left;
+    }
+    .sidebar__icon {
+      line-height: 60px;
+      float: right;
+      font-size: 20px;
+      a {
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  .sidebar__group {
+    height: 30px;
+    padding: 20px 20px;
+    &:hover {
+      background-color: #69639A;
+    }
+    .sidebar__groupname {
+      font-size: 15px;
+      color: #FFFFFF;
+    }
+    .sidebar__latemassage {
+      padding-top: 5px;
+      font-size: 11px;
+      color: #FFFFFF;
+    }
+  }
+}
