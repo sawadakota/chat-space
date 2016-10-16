@@ -1,4 +1,5 @@
 @import "./reset";
-@import "./sidebar";
-@import "./config";
+@import "./config/variable.scss";
+@import "./modules/chat";
+@import "./modules/sidebar";
 @import "font-awesome";

@@ -1,10 +1,10 @@
 .sidebar {
-  background-color: #2f3e51;
+  background-color: $sidebarMainColor;
   width: 300px;
-  height: 110000px;
+  height: 100%;
 
   .sidebar__top {
-    background-color: #253141;
+    background-color: $sidebarTopColor;
     height: 50px;
     padding: 20px 20px;
     .sidebar__username {
@@ -28,13 +28,13 @@
     height: 30px;
     padding: 20px 20px;
     &:hover {
-      background-color: #69639A;
+      background-color: $sidebarHoverColor;
     }
     .sidebar__groupname {
       font-size: 15px;
       color: #FFFFFF;
     }
-    .sidebar__latemassage {
+    .sidebar__latest-massage {
       padding-top: 5px;
       font-size: 11px;
       color: #FFFFFF;
