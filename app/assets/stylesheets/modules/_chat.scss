@@ -3,25 +3,25 @@
   height: 100%;
   position: relative;
   width: calc(100% - 300px);
-  .chat__main__header {
+  &__header {
     height: 72px;
     padding: 35px 40px 0;
     border-bottom: solid #eeeeee;
-    .chat__main__header--left {
+    &--left {
       float: left;
-      .chat__main__groupname {
+      &__groupname {
         font-size: 20px;
         color: $maimGroupNameColor;
       }
-      .chat__main__groupmenber {
+      &__groupmenber {
         font-size: 12px;
         color: $maimGroupMenberColor;
         padding: 15px 0;
       }
     }
-    .chat__main__header__right {
+    &__right {
       float: right;
-      .chat__main__header__right__button {
+      &__button {
         height: 40px;
         line-height: 40px;
         border: solid 2px $mainHeaderButton;
@@ -31,18 +31,18 @@
       }
     }
   }
-  .chat__main__body {
+  &__body {
       overflow: scroll;
       height: calc(100vh - 50px - 72px);  
   }
-  .chat__main__content {
+  &__content {
     margin-top: 46px;
     padding: 0 40px;
-    .chat__main__content__massage-haeder {
+    &__massage-haeder {
       @include clearfix();
     }
 
-    .chat__main__content__username {
+    &__username {
       font-size: 16px;
       font-weight: bold;
       float: left;
@@ -55,13 +55,13 @@
       margin-left: 10px;
       line-height: 12px;
     }
-    .chat__main__content__text {
+    &__text {
       font-size: 14px;
       color: #434A45;
     }
   }
 
-  .chat__main__footer {
+  &__footer {
     height: 50px;
     position: absolute;
     bottom: 0;
@@ -69,24 +69,20 @@
     left: 0;
     background-color: #DDDDDD;
     padding: 20px 40px;
-    .chat__area {
+    &__area {
       display: relative;
       width: calc(100% - 150px);
       height: 50px;
       float: left;
       background-color: #FFFFFF;
-      textarea {
-        margin: 0;
-        padding: 0;
-        border: none;
-      }
-      .chat__main__footer__body {
+      &__body {
         width: 100%;
         height: 50px;
         float: left;
         line-height: 50px;
         font-size: 16px;
         padding: 0 10px;
+        border: none;
       }
       label {
         position: absolute;
@@ -101,7 +97,7 @@
         font-size: 17px;
       }
     }
-    .chat__main__footer__send-button{
+    &__send-button{
       float: left;
       display: inline-block;
       width: 100px;
