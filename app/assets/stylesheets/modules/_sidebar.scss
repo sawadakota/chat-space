@@ -1,21 +1,21 @@
-.chat__sidebar {
+.sidebar {
   background-color: $sidebarMainColor;
   width: 300px;
   height: 100%;
   float: left;
 
-  .chat__sidebar__top {
+  .sidebar__top {
     background-color: $sidebarTopColor;
     height: 50px;
     padding: 20px 20px;
-    .chat__sidebar__username {
+    .sidebar__username {
       line-height: 60px;
       font-size: 16px;
       color: #FFFFFF;
       font-weight: bold;
       float: left;
     }
-    .chat__sidebar__icon {
+    .sidebar__icon {
       line-height: 60px;
       float: right;
       font-size: 20px;
@@ -25,17 +25,17 @@
     }
   }
 
-  .chat__sidebar__group {
+  .sidebar__group {
     height: 30px;
     padding: 20px 20px;
     &:hover {
       background-color: $sidebarHoverColor;
     }
-    .chat__sidebar__groupname {
+    .sidebar__groupname {
       font-size: 15px;
       color: #FFFFFF;
     }
-    .chat__sidebar__latest-massage {
+    .sidebar__latest-massage {
       padding-top: 5px;
       font-size: 11px;
       color: #FFFFFF;
