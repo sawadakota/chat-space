@@ -9,3 +9,98 @@
   .sidebar__group
     %p.sidebar__groupname div
     %p.sidebar__latest-massage これが最新メッセージです
+
+.chat__main
+  .chat__main__header
+    .chat__main__header--left
+      %h5.chat__main__groupname divグループ
+      %h5.chat__main__groupmenber Menbars: kota seo shizuka
+    .chat__main__header__right
+      =link_to "edit", "", class: "chat__main__header__right__button"
+
+  .chat__main__body
+    .chat__main__content
+      .chat__main__content__massage-haeder
+        %h5.chat__main__content__username kota
+        %span.post__date 2016/10/16
+      %p.chat__main__content__text test
+
+    .chat__main__content
+      .chat__main__content__massage-haeder
+        %h5.chat__main__content__username kota
+        %span.post__date 2016/10/16
+      %p.chat__main__content__text test
+
+    .chat__main__content
+      .chat__main__content__massage-haeder
+        %h5.chat__main__content__username kota
+        %span.post__date 2016/10/16
+      %p.chat__main__content__text test
+
+    .chat__main__content
+      .chat__main__content__massage-haeder
+        %h5.chat__main__content__username kota
+        %span.post__date 2016/10/16
+      %p.chat__main__content__text test
+    .chat__main__content
+      .chat__main__content__massage-haeder
+        %h5.chat__main__content__username kota
+        %span.post__date 2016/10/16
+      %p.chat__main__content__text test
+
+
+    .chat__main__content
+      .chat__main__content__massage-haeder
+        %h5.chat__main__content__username kota
+        %span.post__date 2016/10/16
+      %p.chat__main__content__text test
+
+    .chat__main__content
+      .chat__main__content__massage-haeder
+        %h5.chat__main__content__username kota
+        %span.post__date 2016/10/16
+      %p.chat__main__content__text test
+
+    .chat__main__content
+      .chat__main__content__massage-haeder
+        %h5.chat__main__content__username kota
+        %span.post__date 2016/10/16
+      %p.chat__main__content__text test
+    .chat__main__content
+      .chat__main__content__massage-haeder
+        %h5.chat__main__content__username kota
+        %span.post__date 2016/10/16
+      %p.chat__main__content__text test
+
+
+    .chat__main__content
+      .chat__main__content__massage-haeder
+        %h5.chat__main__content__username kota
+        %span.post__date 2016/10/16
+      %p.chat__main__content__text test
+
+    .chat__main__content
+      .chat__main__content__massage-haeder
+        %h5.chat__main__content__username kota
+        %span.post__date 2016/10/16
+      %p.chat__main__content__text test
+
+    .chat__main__content
+      .chat__main__content__massage-haeder
+        %h5.chat__main__content__username kota
+        %span.post__date 2016/10/16
+      %p.chat__main__content__text test
+    .chat__main__content
+      .chat__main__content__massage-haeder
+        %h5.chat__main__content__username kota
+        %span.post__date 2016/10/16
+      %p.chat__main__content__text test
+
+
+  .chat__main__footer
+    .chat__main__footer__area
+      %textarea.chat__main__footer__area__body{placeholder: "type a message"}
+      %label
+        %input{:name => "commit", :type => "file"}
+        = fa_icon "file-image-o"
+    %input.chat__main__footer__send-button{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
