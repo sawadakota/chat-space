@@ -1,0 +1,14 @@
+.flash {
+  width: 100%;
+  line-height: 30px;
+  text-align: center;
+  position: fixed;
+  margin-bottom: 30px;
+  color: #FFFDFD;
+  .success {
+    background-color: $flashSuccessMessage;
+  }
+  .error {
+    background-color: $flashErrorMessage;
+  }
+}
