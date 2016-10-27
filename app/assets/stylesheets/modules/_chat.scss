@@ -86,26 +86,28 @@
       }
       label {
         position: absolute;
+        input {
+          display: none;
+        }
+        i {
+          position: absolute;
+          right: 20px;
+          top: 15px;
+          font-size: 17px;
+        }
       }
-      input {
-        display: none;
-       }
-      i {
+      &__send-button{
+        float: left;
         position: absolute;
-        right: 20px;
-        top: 15px;
-        font-size: 17px;
+        right: 55px;
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        color: #FFFFFF;
+        margin-left: 50px;
+        font-size: 15px;
+        background-color: $mainHeaderButton;
       }
-    }
-    &__send-button{
-      float: left;
-      display: inline-block;
-      width: 100px;
-      height: 50px;
-      color: #FFFFFF;
-      margin-left: 50px;
-      font-size: 15px;
-      background-color: $mainHeaderButton;
     }
   }
 }
