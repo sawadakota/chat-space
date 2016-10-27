@@ -13,10 +13,7 @@ vendor/bundle/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-<<<<<<< HEAD
 
-=======
->>>>>>> 47265d615432f0bca159ab46e9578d9a169cf312
 public/uploads/
 
 # Ignore Byebug command history file.
