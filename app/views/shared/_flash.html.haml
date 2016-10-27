@@ -1,3 +1,8 @@
-- flash.each do |key, value|
+- if @message.errors.any?
   .flash
-    = content_tag(:div, value, class: "#{key}")
+    %h2.error
+      = @message.errors.count
+      件のエラーがあります。
+      - @message.errors.full_messages.each do |msg|
+        = msg
+        。
