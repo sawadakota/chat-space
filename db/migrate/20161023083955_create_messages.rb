@@ -3,8 +3,8 @@ class CreateMessages < ActiveRecord::Migration[5.0]
     create_table :messages do |t|
       t.text :body
       t.string :image
-      t.references :group_id
-      t.references :user_id
+      t.references :group
+      t.references :user
       t.timestamps
     end
   end
