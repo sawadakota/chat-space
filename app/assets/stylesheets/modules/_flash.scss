@@ -2,13 +2,11 @@
   width: 100%;
   line-height: 30px;
   text-align: center;
-  position: fixed;
-  margin-bottom: 30px;
   color: #FFFDFD;
-  .success {
+  .notice {
     background-color: $flashSuccessMessage;
   }
-  .error {
+  .alert {
     background-color: $flashErrorMessage;
   }
 }
