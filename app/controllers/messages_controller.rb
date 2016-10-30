@@ -6,9 +6,10 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
-      flash[:success] = 'メッセージを送信しました！'
+      flash[:notice] = 'メッセージを送信しました！'
       redirect_to :root
     else
+      flash[:alert] = 'メッセージを入力してください'
       render :index
     end
   end
