@@ -1,11 +1,9 @@
 class GroupsController < ApplicationController
 
-  before_action :set_group, only: [:show, :edit, :update]
+  before_action :set_group, only: [:edit, :update]
 
-  def show
+  def index
     @groups = Group.all
-    @message = Message.new
-    @messages = @group.messages
   end
 
   def new
@@ -31,7 +29,7 @@ class GroupsController < ApplicationController
   def update
     if @group.update(group_params)
        flash[:notice] = 'グループを更新しました！'
-       redirect_to group_path(@group)
+       redirect_to group_messages_path(@group)
     else
       flash[:alert] = 'グループ名を入力してください'
       render :edit

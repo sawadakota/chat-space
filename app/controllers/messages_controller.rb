@@ -1,7 +1,9 @@
 class MessagesController < ApplicationController
+
   def index
-    @message = Message.new
     @groups = Group.all
+    @message = Message.new
+    @group = Group.find(params[:group_id])
   end
 
   def create
@@ -11,7 +13,7 @@ class MessagesController < ApplicationController
       redirect_to :back
     else
       flash[:alert] = 'メッセージを入力してください'
-      redirect_to group_path(params[:group_id])
+      redirect_to group_messages_path(params[:group_id])
     end
   end
 

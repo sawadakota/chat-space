@@ -1,4 +1,4 @@
-=link_to group_path(group) do
+= link_to group_messages_path(group) do
   .sidebar__group
     %p.sidebar__groupname=group.name
     - if group.messages.presence
