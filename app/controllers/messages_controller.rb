@@ -5,7 +5,6 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @groups = Group.all
     @message = current_user.messages.new(message_params)
     if @message.save
       flash[:notice] = 'メッセージを送信しました！'

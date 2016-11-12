@@ -3,8 +3,8 @@
 .chat__main
   .chat__main__header
     .chat__main__header--left
-      %h5.chat__main__groupname= @group.name
-      %h5.chat__main__groupmember Menbars:
+      %h2.chat__main__header--left__groupname= @group.name
+      %span.chat__main__header--left__groupmember Menbars:
       = render partial: "member", collection: @group.users, as: :member
     .chat__main__header__right
       =link_to "edit", edit_group_path, class: "chat__main__header__right__button"

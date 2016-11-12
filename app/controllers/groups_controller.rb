@@ -1,31 +1,41 @@
 class GroupsController < ApplicationController
 
+  before_action :set_group, only: [:show, :edit, :update]
+
   def show
     @groups = Group.all
-    @group = Group.find(params[:id])
     @message = Message.new
     @messages = @group.messages
   end
 
   def new
     @group = Group.new
-    @group.group_users.new
+    @group.group_users.build
     @users = User.all
   end
 
   def create
-    @group = Group.create(group_params)
-    redirect_to :root
+    @group = Group.new(group_params)
+    if @group.save
+       flash[:notice] = 'グループを作成しました！'
+       redirect_to root_path
+    else
+      flash[:alert] = 'グループ名を入力してください'
+      render :new
+    end
   end
 
   def edit
-    @group = Group.find(params[:id])
   end
 
   def update
-    @group = Group.find(params[:id])
-    @group.update(group_params)
-    redirect_to :root
+    if @group.update(group_params)
+       flash[:notice] = 'グループを更新しました！'
+       redirect_to group_path(@group)
+    else
+      flash[:alert] = 'グループ名を入力してください'
+      render :edit
+    end
   end
 
   private
@@ -33,5 +43,9 @@ class GroupsController < ApplicationController
     params.require(:group).permit(
       :name,
       user_ids: [])
+  end
+
+  def set_group
+    @group = Group.find(params[:id])
   end
 end

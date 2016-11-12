@@ -10,12 +10,13 @@
       float: left;
       &__groupname {
         font-size: 20px;
+        margin-bottom: 15px;
         color: $maimGroupNameColor;
       }
       &__groupmember {
         font-size: 12px;
         color: $maimGroupMemberColor;
-        padding: 15px 0;
+        margin-top: 15px;
       }
     }
     &__right {
