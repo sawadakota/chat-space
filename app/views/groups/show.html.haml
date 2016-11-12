@@ -1,0 +1,22 @@
+= render partial: "shared/sidebar", locals: {groups: @groups}
+
+.chat__main
+  .chat__main__header
+    .chat__main__header--left
+      %h5.chat__main__groupname= @group.name
+      %h5.chat__main__groupmember Menbars:
+      = render partial: "member", collection: @group.users, as: :member
+    .chat__main__header__right
+      =link_to "edit", edit_group_path, class: "chat__main__header__right__button"
+
+  .chat__main__body
+    = render partial: "message", collection: @messages
+
+  .chat__main__footer
+    .chat__main__footer__area
+      = form_for [@group, @message] do |f|
+        = f.text_area :body, class: "chat__main__footer__area__body", placeholder: "type a message"
+        %label
+          = f.file_field :image
+          = fa_icon "file-image-o"
+        = f.submit "send", class: "chat__main__footer__area__send-button"
