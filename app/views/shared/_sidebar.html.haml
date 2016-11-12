@@ -7,4 +7,4 @@
       =link_to edit_user_registration_path do
         = fa_icon "cog"
 
-  = render partial: 'groups/group', collection: current_user.groups.includes(:messages)
+  = render partial: 'shared/group', collection: current_user.groups.includes(:messages)
