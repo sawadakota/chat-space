@@ -14,6 +14,8 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
+
+    binding.pry
     if @group.save
        flash[:notice] = 'グループを作成しました！'
        redirect_to root_path
@@ -24,6 +26,10 @@ class GroupsController < ApplicationController
   end
 
   def edit
+  end
+
+  def search
+    @members = User.where('title LIKE(?)',"%#{search_params[:keyword]}%").order('name ASC').limit(5)
   end
 
   def update

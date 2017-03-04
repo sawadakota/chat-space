@@ -66,6 +66,19 @@
       line-height: 30px;
       padding: 10px 15px;
       box-sizing: border-box;
+
+      .user-search-result {
+        padding: 0 15px;
+        width: 200px;
+        height: 100px;
+        background-color: #000000;
+        line-height: 50px;
+        font-size: 14px;
+        border-bottom: 1px solid #ddd;
+        .user-search-result__name {
+          color: black;
+        }
+      }
     }
   }
 
