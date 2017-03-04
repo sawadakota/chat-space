@@ -4,4 +4,5 @@ Rails.application.routes.draw do
     resources :messages
   end
   root 'groups#index'
+  get 'users/search/:name', to: 'users#search'
 end
