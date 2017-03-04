@@ -53,7 +53,6 @@ $(document).on('turbolinks:load', function() {
   })
 
   $user_chat_members.on('click', '.user-remove', function(){
-    console.log("hoge")
     $("#user_" + $(this).attr('data-id')).remove();
   })
 
