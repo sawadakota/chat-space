@@ -3,32 +3,23 @@ $(document).on('turbolinks:load', function() {
   var $user_results = $("#user-search-result");
   var $user_chat_members = $("#user-chat-member");
 
-  function appendList(id, name, status){
-    var $user_result = $('<div class="chat-group-user clearfix">');
-    var $user_result_name = $('<p class="chat-group-user__name">');
-    $user_result.attr('id', 'user_' + id);
-    $user_result.attr('data-id', id);
+  function searchUser(id, name){
+    $user_results.append(
+      `<div class="chat-group-user clearfix" id=user_${id}>
+         <p class="chat-group-user__name"> ${name} </p>
+         <a class="user-add chat-group-user__btn chat-group-user__btn--add" data-id=${id} data-name=${name}>追加</a>
+       </div>`)
+  };
 
-    var $user_result_btn = $('<a class="user-' + status + ' chat-group-user__btn chat-group-user__btn--' + status + '">');
-    (status=="add")? $user_result_btn.append("追加"): $user_result_btn.append("削除");
-
-    $user_result_btn.attr("data-id", id);
-    $user_result_btn.attr("data-name", name);
-
-    var $appendName = $user_result_name.append(name);
-
-    if (status == "add"){
-      var $appendList = $user_result.append($user_result_name).append($user_result_btn);
-      $user_results.append($appendList)
-    }else{
-      var $post_input = $('<input name="group[user_ids][]" type="hidden">');
-      $post_input.val(id);
-
-      var $appendList = $user_result.append($post_input).append($user_result_name).append($user_result_btn);
-      $user_chat_members.append($appendList);
-    }
+  function addChatMember(id, name){
+    $user_chat_members.append(
+      `<div class="chat-group-user clearfix" id=user_${id}>
+         <input name="group[user_ids][]" type="hidden" value=${id}>
+         <p class="chat-group-user__name"> ${name} </p>
+         <a class="user-remove chat-group-user__btn chat-group-user__btn--remove" data-id=${id} data-name=${name}>削除</a>
+       </div>`
+    )
   }
-
 
   $user_field.keyup(function(){
     if ($user_field.val()) {
@@ -41,14 +32,14 @@ $(document).on('turbolinks:load', function() {
         $user_results.empty();
         var members = [];
         $.each(data, function( key, value ){
-          appendList(value.id, value.name, "add")
+          searchUser(value.id, value.name)
         })
       })
     }
   })
 
   $user_results.on('click', ".user-add", function(){
-    appendList($(this).attr('data-id'), $(this).attr('data-name'), "remove")
+    addChatMember($(this).attr('data-id'), $(this).attr('data-name'))
     $("#user_" + $(this).attr('data-id')).remove();
   })
 
