@@ -17,7 +17,8 @@ class GroupsController < ApplicationController
     if @group.save
        redirect_to root_path, notice:"グループを作成しました"
     else
-      redirect_to new_group_path, alert:"グループ名を入れてください"
+      flash.now[:alert] = 'グループ名を入力してください'
+      render :new
     end
   end
 
