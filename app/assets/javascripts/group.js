@@ -31,8 +31,8 @@ $(document).on('turbolinks:load', function() {
       .done(function(data){
         $user_results.empty();
         var members = [];
-        $.each(data, function( key, value ){
-          searchUser(value.id, value.name)
+        data.forEach(function(user){
+          searchUser(user.id, user.name)
         })
       })
     }
