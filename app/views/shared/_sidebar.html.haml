@@ -6,5 +6,5 @@
         =fa_icon "pencil-square-o"
       =link_to edit_user_registration_path do
         = fa_icon "cog"
-
-  = render partial: 'shared/group', collection: current_user.groups.includes(:messages)
+  .sidebar__groups
+    = render partial: 'shared/group', collection: current_user.groups.includes(:messages)

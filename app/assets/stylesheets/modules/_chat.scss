@@ -33,11 +33,10 @@
   }
   &__body {
       overflow: scroll;
-      height: calc(100vh - 50px - 72px);
-          margin-bottom: 100px;
+      height: calc(100vh - 110px);
   }
   &__content {
-    margin-top: 46px;
+    margin-bottom: 40px;
     padding: 0 40px;
     &__massage-haeder {
       @include clearfix();
@@ -84,6 +83,7 @@
         font-size: 16px;
         padding: 0 10px;
         border: none;
+        overflow: scroll;
       }
       label {
         position: absolute;
