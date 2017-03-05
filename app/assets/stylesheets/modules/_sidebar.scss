@@ -2,11 +2,18 @@
   background-color: $sidebarMainColor;
   width: 300px;
   float: left;
+  height: 100%;
+  overflow:scroll;
+  position: relative;
 
   .sidebar__top {
     background-color: $sidebarTopColor;
     height: 50px;
     padding: 20px 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+
     .sidebar__username {
       line-height: 60px;
       font-size: 16px;
@@ -22,6 +29,10 @@
         color: #FFFFFF;
       }
     }
+  }
+
+  .sidebar__groups{
+    margin-top: 90px;
   }
 
   .sidebar__group {
